@@ -5,7 +5,7 @@ module.exports = ({ strapi }) => ({
 
   async getSettings(ctx) {
     try {
-      const store = strapi.store({ type: "plugin", name: "strapi-api-deep-populate" });
+      const store = strapi.store({ type: "plugin", name: "strapi-plugin-api-deep-populate" });
       const savedSettings = (await store.get({ key: "settings" })) || {};
 
       const contentTypes = strapi.contentTypes;
@@ -37,7 +37,7 @@ module.exports = ({ strapi }) => ({
 
   async setSettings(ctx) {
     try {
-      const store = strapi.store({ type: "plugin", name: "strapi-api-deep-populate" });
+      const store = strapi.store({ type: "plugin", name: "strapi-plugin-api-deep-populate" });
 
       // OPTIONAL: Clean the data before saving so you don't save 'displayName' in the DB
       const dataToSave = { ...ctx.request.body };
