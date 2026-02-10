@@ -1,7 +1,11 @@
 node_modules/
-dist/
 build/
 .DS_Store
 *.log
 .env*
 .cache/
+
+# If you want the repo to contain only compiled output, ignore source folders (root only):
+/admin/
+/server/
+/scripts/
