@@ -1,11 +1,11 @@
 {
-  "name": "strapi-plugin-hello",
+  "name": "strapi-plugin-api-deep-populate",
   "version": "1.0.0",
-  "description": "A simple Strapi plugin that displays hello message in global settings",
+  "description": "Strapi API Deep Populate plugin",
   "strapi": {
-    "name": "hello-plugin",
-    "displayName": "Hello Plugin",
-    "description": "A simple hello plugin for Strapi",
+    "name": "strapi-api-deep-populate",
+    "displayName": "Strapi API Deep Populate",
+    "description": "Deep populate Strapi APIs with configurable settings",
     "kind": "plugin"
   },
   "main": "./dist/server/index.js",

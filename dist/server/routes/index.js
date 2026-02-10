@@ -3,7 +3,7 @@
 /**
  * Plugin routes
  *
- * These routes will be mounted under /hello-plugin by Strapi.
+ * These routes will be mounted under /strapi-api-deep-populate by Strapi.
  */
 
 module.exports = [
