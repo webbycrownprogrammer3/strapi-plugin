@@ -10,7 +10,9 @@
   },
   "main": "./dist/server/index.js",
   "files": [
-    "dist"
+    "dist",
+    "strapi-admin.js",
+    "strapi-server.js"
   ],
   "scripts": {
     "build": "cross-env NODE_ENV=production node scripts/build.js",
