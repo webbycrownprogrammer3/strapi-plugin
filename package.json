@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Strapi API Deep Populate plugin",
   "strapi": {
-    "name": "strapi-api-deep-populate",
+    "name": "strapi-plugin-api-deep-populate",
     "displayName": "Strapi API Deep Populate",
     "description": "Deep populate Strapi APIs with configurable settings",
     "kind": "plugin"
