@@ -1,0 +1,49 @@
+{
+  "name": "strapi-plugin-hello",
+  "version": "1.0.0",
+  "description": "A simple Strapi plugin that displays hello message in global settings",
+  "strapi": {
+    "name": "hello-plugin",
+    "displayName": "Hello Plugin",
+    "description": "A simple hello plugin for Strapi",
+    "kind": "plugin"
+  },
+  "main": "./dist/server/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "cross-env NODE_ENV=production node scripts/build.js",
+    "develop": "cross-env NODE_ENV=development node scripts/build.js --watch",
+    "watch": "cross-env NODE_ENV=development node scripts/build.js --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.23.0",
+    "@babel/preset-react": "^7.23.0",
+    "babel-loader": "^9.1.3",
+    "cross-env": "^7.0.3",
+    "fs-extra": "^11.1.1",
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "peerDependencies": {
+    "@strapi/strapi": "^5.0.0",
+    "@strapi/design-system": "^2.0.0",
+    "@strapi/icons": "^2.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT",
+  "author": "",
+  "keywords": [
+    "strapi",
+    "plugin"
+  ]
+}
