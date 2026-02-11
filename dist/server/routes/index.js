@@ -1,18 +1,23 @@
-module.exports = [
-  {
-    method: "GET",
-    path: "/settings",
-    handler: "populate.getSettings", // Use short name: controllerName.actionName
-    config: {
-      auth: false,
+"use strict";
+
+module.exports = {
+  type: "admin", // This tells Strapi these are Admin Panel routes
+  routes: [
+    {
+      method: "GET",
+      path: "/settings",
+      handler: "populate.getSettings",
+      config: {
+        auth: false, // Set to false for testing, then use admin permissions
+      },
     },
-  },
-  {
-    method: "POST", // Your React page uses .put(), but your route says .POST()
-    path: "/settings",
-    handler: "populate.setSettings",
-    config: {
-      auth: false,
+    {
+      method: "PUT",
+      path: "/settings",
+      handler: "populate.setSettings",
+      config: {
+        auth: false,
+      },
     },
-  },
-];
+  ],
+};
