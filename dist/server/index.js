@@ -1,8 +1,9 @@
-'use strict';
+"use strict";
 
-const routes = require('./routes');
-const controllers = require('./controllers');
+const routes = require("./routes");
+const controllers = require("./controllers");
 const middlewares = require("./middlewares");
+const services = require("./services");
 
 module.exports = () => ({
   register({ strapi }) {},
@@ -10,4 +11,5 @@ module.exports = () => ({
   routes,
   controllers,
   middlewares,
+  services,
 });
