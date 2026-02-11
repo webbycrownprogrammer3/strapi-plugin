@@ -20,10 +20,6 @@
     "watch": "cross-env NODE_ENV=development node scripts/build.js --watch",
     "prepublishOnly": "npm run build"
   },
-  "dependencies": {
-    "@strapi/design-system": "^2.0.0",
-    "@strapi/icons": "^2.0.0"
-  },
   "devDependencies": {
     "@babel/core": "^7.23.0",
     "@babel/preset-env": "^7.23.0",
