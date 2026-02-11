@@ -1,12 +1,12 @@
 'use strict';
 
+const routes = require('./routes');
+const controllers = require('./controllers');
 
-module.exports = {
-  register({ strapi }) {
-    // Register any server-side logic here if needed
-  },
-
-  bootstrap({ strapi }) {
-    // Bootstrap any server-side logic here if needed
-  },
-};
+module.exports = () => ({
+  register({ strapi }) {},
+  bootstrap({ strapi }) {},
+  routes,
+  controllers,
+  type: 'content-api',
+});
