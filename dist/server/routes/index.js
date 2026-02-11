@@ -1,23 +1,21 @@
 "use strict";
 
 module.exports = {
-  type: "admin", // This tells Strapi these are Admin Panel routes
-  routes: [
-    {
-      method: "GET",
-      path: "/settings",
-      handler: "populate.getSettings",
-      config: {
-        auth: false, // Set to false for testing, then use admin permissions
+  admin: {
+    type: "admin",
+    routes: [
+      {
+        method: "GET",
+        path: "/settings",
+        handler: "populate.getSettings",
+        config: { auth: false },
       },
-    },
-    {
-      method: "PUT",
-      path: "/settings",
-      handler: "populate.setSettings",
-      config: {
-        auth: false,
+      {
+        method: "PUT", // Change from POST to PUT
+        path: "/settings",
+        handler: "populate.setSettings",
+        config: { auth: false },
       },
-    },
-  ],
+    ],
+  },
 };
