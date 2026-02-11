@@ -8,5 +8,4 @@ module.exports = () => ({
   bootstrap({ strapi }) {},
   routes,
   controllers,
-  type: 'content-api',
 });
