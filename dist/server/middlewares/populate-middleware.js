@@ -22,7 +22,10 @@ module.exports = (config, { strapi }) => {
       const uid = contentType.uid;
 
       // 3. Get all settings from the Plugin Store
-      const store = strapi.store({ type: "plugin", name: "auto-populate" });
+      const store = strapi.store({
+        type: "plugin",
+        name: "strapi-plugin-api-deep-populate",
+      });
       const savedSettings = await store.get({ key: "settings" });
 
       // 4. Extract settings specific to THIS UID
@@ -39,7 +42,7 @@ module.exports = (config, { strapi }) => {
 
       // 5. Call the service with the UID-specific toggles
       const dynamicPopulate = strapi
-        .plugin("auto-populate")
+        .plugin("strapi-plugin-api-deep-populate")
         .service("populate")
         .getPopulateStructure(
           uid,
