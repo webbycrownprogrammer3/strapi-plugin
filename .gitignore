@@ -1,11 +1,29 @@
+# Node
 node_modules/
-build/
-.DS_Store
-*.log
-.env*
-.cache/
 
-# If you want the repo to contain only compiled output, ignore source folders (root only):
-/admin/
-/server/
-/scripts/
+# Build output (optional if you want to ignore dist)
+# dist/
+
+# Strapi admin source (ignored as requested)
+admin/
+
+# Docs / Markdown files (ignored as requested)
+AUDIO_SCRIPT
+CHANGELOG
+CONTRIBUTING
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+
+# Optional: lock file (if you don't want to push it)
+# package-lock.json

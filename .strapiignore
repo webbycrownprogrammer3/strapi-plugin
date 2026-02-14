@@ -1,7 +1,0 @@
-node_modules/
-src/
-admin/
-server/
-*.log
-.DS_Store
-.env*
