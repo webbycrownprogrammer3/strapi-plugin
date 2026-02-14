@@ -39,8 +39,7 @@
     "build:admin": "strapi-plugin build",
     "watch": "strapi-plugin watch",
     "watch:link": "strapi-plugin watch:link",
-    "verify": "strapi-plugin verify",
-    "prepare": "npm run build"
+    "verify": "strapi-plugin verify"
   },
   "dependencies": {
     "@strapi/design-system": "^2.0.0-rc.21",
