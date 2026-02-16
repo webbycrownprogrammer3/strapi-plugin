@@ -1,8 +1,9 @@
-import { jsx, jsxs } from "react/jsx-runtime";
-import { useIntl } from "react-intl";
-import { Box, Field } from "@strapi/design-system";
-import "@strapi/icons";
-import { useState, useEffect } from "react";
+"use strict";
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+const jsxRuntime = require("react/jsx-runtime");
+const reactIntl = require("react-intl");
+const designSystem = require("@strapi/design-system");
+const react = require("react");
 const AdvancedInput = ({
   attribute = {},
   description = { id: "", defaultMessage: "" },
@@ -15,10 +16,10 @@ const AdvancedInput = ({
   required,
   value
 }) => {
-  const { formatMessage } = useIntl();
-  const [inputValue, setInputValue] = useState(value || "");
-  const [validationError, setValidationError] = useState(null);
-  const [hasInteracted, setHasInteracted] = useState(false);
+  const { formatMessage } = reactIntl.useIntl();
+  const [inputValue, setInputValue] = react.useState(value || "");
+  const [validationError, setValidationError] = react.useState(null);
+  const [hasInteracted, setHasInteracted] = react.useState(false);
   const {
     minLength = 0,
     maxLength = 0,
@@ -36,7 +37,7 @@ const AdvancedInput = ({
     fieldNote = ""
   } = options;
   const fieldNoteFromAttribute = attribute.options?.fieldNote || "";
-  useEffect(() => {
+  react.useEffect(() => {
     const initialValue = value === void 0 ? defaultValue : value;
     setInputValue(initialValue);
     if (error) {
@@ -99,7 +100,7 @@ const AdvancedInput = ({
       fontFamily: "inherit",
       backgroundColor: disabled ? "#f6f6f9" : "#ffffff"
     };
-    return /* @__PURE__ */ jsx(
+    return /* @__PURE__ */ jsxRuntime.jsx(
       "input",
       {
         ...commonProps,
@@ -108,15 +109,15 @@ const AdvancedInput = ({
       }
     );
   };
-  return /* @__PURE__ */ jsx(Box, { col: 6, children: /* @__PURE__ */ jsxs(Field.Root, { name, error: displayError, children: [
-    /* @__PURE__ */ jsxs(Field.Label, { children: [
+  return /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { col: 6, children: /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Field.Root, { name, error: displayError, children: [
+    /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Field.Label, { children: [
       intlLabel.id ? formatMessage(intlLabel) : intlLabel.defaultMessage || name,
-      required && /* @__PURE__ */ jsx("span", { style: { color: "#d02b20", marginLeft: "4px" }, children: "*" })
+      required && /* @__PURE__ */ jsxRuntime.jsx("span", { style: { color: "#d02b20", marginLeft: "4px" }, children: "*" })
     ] }),
     renderInput(),
-    displayError && /* @__PURE__ */ jsx(Field.Error, { children: displayError }),
-    description && (description.id || description.defaultMessage) && /* @__PURE__ */ jsx(Field.Hint, { children: description.id ? formatMessage(description) : description.defaultMessage }),
-    (fieldNote || fieldNoteFromAttribute) && /* @__PURE__ */ jsx("span", { style: {
+    displayError && /* @__PURE__ */ jsxRuntime.jsx(designSystem.Field.Error, { children: displayError }),
+    description && (description.id || description.defaultMessage) && /* @__PURE__ */ jsxRuntime.jsx(designSystem.Field.Hint, { children: description.id ? formatMessage(description) : description.defaultMessage }),
+    (fieldNote || fieldNoteFromAttribute) && /* @__PURE__ */ jsxRuntime.jsx("span", { style: {
       fontStyle: "italic",
       color: "#666",
       fontSize: "12px",
@@ -125,6 +126,4 @@ const AdvancedInput = ({
     }, children: fieldNote || fieldNoteFromAttribute })
   ] }) });
 };
-export {
-  AdvancedInput as default
-};
+exports.default = AdvancedInput;

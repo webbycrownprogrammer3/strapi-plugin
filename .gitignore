@@ -4,9 +4,7 @@ node_modules/
 # Build output (optional if you want to ignore dist)
 # dist/
 
-# Strapi admin source (ignored as requested)
-admin/
-server/
+# Strapi admin and server source - KEEP in repo for strapi-plugin build and GitHub installs
 
 # Docs / Markdown files (ignored as requested)
 AUDIO_SCRIPT
