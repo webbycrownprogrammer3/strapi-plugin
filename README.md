@@ -8,6 +8,16 @@ Professional custom fields for Strapi CMS that provide advanced functionality wi
 
 📦 **NPM Package**: [@webbycrown/advanced-fields](https://www.npmjs.com/package/@webbycrown/advanced-fields)
 
+## 🎥 Overview & Usage Demo
+
+A short introduction and quick overview of **Advanced Fields for Strapi**, showcasing available field types, configuration options, and real-world usage inside the Strapi admin panel.
+
+[![Watch the demo](https://raw.githubusercontent.com/webbycrown/strapi-advanced-fields/main/assets/advanced-field-play-img.png)](https://www.youtube.com/watch?v=-WRuUEWwGfk)
+
+▶️ **[Watch Full Video on YouTube](https://www.youtube.com/watch?v=-WRuUEWwGfk)**
+
+---       
+
 ## ✨ Features
 
 ### 🔤 Advanced Input
@@ -56,6 +66,7 @@ yarn add @webbycrown/advanced-fields
    - Advanced Input
    - Advanced Checkbox
    - Advanced Radio
+
 
 ## 📖 Usage Examples
 
@@ -263,8 +274,33 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📊 Changelog
 
+### v1.0.7
+- 📝 Updated Plugin for latest version.
+
+### v1.0.6
+- 📝 Updated the README to properly display the YouTube preview image in Any documentation.
+
+### v1.0.5
+- 📝 Updated the README to include the YouTube demo video link.
+
+### v1.0.4
+- 🐛 Fixed minor bugs in field validation
+- 📝 Updated README to include Demo Video section
+- ⚡ Improved documentation clarity for plugin setup and usage
+
+### v1.0.3
+- 📝 Documentation updates and minor formatting improvements.
+
+### v1.0.2
+- 🐛 Fixed bugs.
+- 🛠️ Resolved minor issues affecting
+
+### v1.0.1
+- 📝 Updated the README file.
+- ✨ Improved clarity and formatting for better readability.
+
 ### v1.0.0
-- ✨ Initial release
+- ✨ Initial release  
 - 🔤 Advanced Input field with validation
 - ☑️ Advanced Checkbox (single/multiple)
 - 🔘 Advanced Radio (single/multiple)
