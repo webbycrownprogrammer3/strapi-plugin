@@ -98,6 +98,33 @@ const customFields = [
       }
       return null;
     }
+  },
+  {
+    name: "enumeration",
+    type: "json",
+    validate: (value, { required, options = {} }) => {
+      const {
+        minChoices = 0,
+        maxChoices = 0,
+        customErrorMessage = ""
+      } = options;
+      if (required) {
+        if (!value || Array.isArray(value) && value.length === 0 || typeof value === "string" && value.trim() === "" || value === null || value === void 0) {
+          return customErrorMessage || "This field is required";
+        }
+      }
+      if (!value || Array.isArray(value) && value.length === 0) {
+        return null;
+      }
+      const values = Array.isArray(value) ? value : [];
+      if (minChoices > 0 && values.length < minChoices) {
+        return customErrorMessage || `Please select at least ${minChoices} option${minChoices > 1 ? "s" : ""}`;
+      }
+      if (maxChoices > 0 && values.length > maxChoices) {
+        return customErrorMessage || `Please select at most ${maxChoices} option${maxChoices > 1 ? "s" : ""}`;
+      }
+      return null;
+    }
   }
 ];
 var server = {
